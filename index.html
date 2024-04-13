@@ -14,7 +14,7 @@
   <body class="main-background max-vw-100">
     <div class="m-auto min-vh-100 max-vh-100 max-vw-100">
       <div
-        class="px-2 navbar d-flex justify-content-start flex-row green-background mb-5 my-xs-auto"
+        class="px-2 navbar d-flex justify-content-start flex-row green-background mb-5 my-xs-auto min-vh-10"
       >
         <h1 class="text-white display-2">TODO</h1>
         <div class="d-inline px-5"></div>
@@ -22,7 +22,7 @@
 
       <div id="app" class="d-flex flex-column row align-items-center">
         <div
-          class="box card row col-xs-12 col-sm-7 col-lg-4 py-5 my-1 my-xs-auto "
+          class="box card row col-xs-12 col-sm-11 min-vh-25 col-lg-4 py-5 my-1 my-xs-auto "
           id="heading"
         >
           <h2 class="text-center text-white display-4 my-xs-auto min-vh-auto">{{today}}</h2>
@@ -31,7 +31,7 @@
           class="d-flex flex-column row align-items-center"
           v-for="task in tasks"
         >
-          <div class="row col-xs-12 col-sm-7 col-lg-4 py-1 my-1 my-xs-auto">
+          <div class="row col-xs-12 col-sm-11 min-vh-25 col-lg-4 py-1 my-1 my-xs-auto">
             <div class="item">
               <input type="checkbox" />
               <p class="display-5 my-xs-auto">{{task}}</p>
@@ -39,7 +39,7 @@
           </div>
         </li>
 
-        <div class="row col-xs-12 col-sm-7 col-lg-4 py-1 my-1 my-xs-auto">
+        <div class="row col-xs-12 col-sm-11 min-vh-25 col-lg-4 py-1 my-1 my-xs-auto">
           <div class="carditem text-center">
             <input
               class=" m-auto p-auto text-center display-5"
@@ -53,10 +53,10 @@
             <button class="m-auto p-auto " @click="addTask(text);text=''">+</button>
           </div>
         </div>
-        <div class="row col-xs-12 col-sm-7 col-lg-4 py-1 my-1 my-xs-auto">
+        <div class="row col-xs-12 col-sm-11 min-vh-25 col-lg-4 py-1 my-1 my-xs-auto">
           <button
             id="clear"
-            class="btn text-white text-center col-12"
+            class="btn text-white text-center col-12 min-vh-25"
             type="submit"
             @click="clear()"
           >
@@ -64,7 +64,7 @@
           </button>
         </div>
 
-        <div class="row col-xs-12 col-sm-7 col-lg-4 py-1 my-1 my-xs-auto">
+        <div class="row col-xs-12 col-sm-11 min-vh-25 col-lg-4 py-1 my-1 my-xs-auto">
           <p class="text-center my-xs-auto">made by Rotem Albukrek</p>
         </div>
       </div>
