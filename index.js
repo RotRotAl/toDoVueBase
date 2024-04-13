@@ -7,10 +7,18 @@ const app=Vue.createApp(
                 tasks:[]
             }
         },
+        created(){
+            this.tasks= JSON.parse(localStorage.getItem("tasks"))??[];
+        },
         methods: {
             addTask(name){
                 this.tasks.push(name);
+                localStorage.setItem("tasks",JSON.stringify(this.tasks));
             },
+            clear(){
+                this.tasks=[];
+                localStorage.setItem("tasks",JSON.stringify([]));
+            }
         }
         
     }
